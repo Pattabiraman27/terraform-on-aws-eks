@@ -1,23 +1,23 @@
 # Input Variables
 # AWS Region
-variable "aws_region" {
-  description = "Region in which AWS Resources to be created"
+variable "instance_region" {
+  description = "Region from which the instance would be launched"
   type = string
   default = "us-east-1"
-}
+  }
 
 # AWS EC2 Instance Type
 variable "instance_type" {
-  description = "EC2 Instnace Type"
+  description = "Default instance type"
   type = string
   default = "t3.micro"
-}
+  }
+
 
 # AWS EC2 Instance Key Pair
 variable "instance_keypair" {
-  description = "AWS EC2 Key Pair that need to be associated with EC2 Instance"
+  description = "Keypair used to access the instances"
   type = string
-  default = "terraform-key"
-}
-
+  default = "terraform-key.pem"
+  }
 
